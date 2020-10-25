@@ -18,7 +18,7 @@ import store from "./store";
 export default class App extends Vue {
   store = store
 
-  count = 10
+  count = 11
 
   click(): void {
     console.log(this.count *2)
