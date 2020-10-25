@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img  @click="click"  alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld v-bind:msg="store.state.count" />
+    <HelloWorld v-bind:msg="store.getters.name" />
   </div>
 </template>
 
@@ -21,8 +21,9 @@ export default class App extends Vue {
   count = 11
 
   click(): void {
-    console.log(this.count *2)
+    console.log(store.state)
     store.commit('increment')
+    store.commit('nameUpdate')
   }
 }
 </script>
